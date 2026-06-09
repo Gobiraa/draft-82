@@ -1,9 +1,17 @@
 package com.draft82.api.model;
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
 @Table(name = "player_decade")
+@Data
 public class PlayerDecade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,96 +32,5 @@ public class PlayerDecade {
     private double tocos;
     private double turnovers;
     private int overallCalculado;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public TeamDecade getTeamDecade() {
-        return teamDecade;
-    }
-
-    public void setTeamDecade(TeamDecade teamDecade) {
-        this.teamDecade = teamDecade;
-    }
-    
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getPosicoesValidas() {
-        return posicoesValidas;
-    }
-
-    public void setPosicoesValidas(String posicoes_validas) {
-        this.posicoesValidas = posicoes_validas;
-    }
-
-    public double getPontos() {
-        return pontos;
-    }
-
-    public void setPontos(double pontos) {
-        this.pontos = pontos;
-    }
-
-    public double getAssistencias() {
-        return assistencias;
-    }
-
-    public void setAssistencias(double assistencias) {
-        this.assistencias = assistencias;
-    }
-
-    public double getRebotes() {
-        return rebotes;
-    }
-
-    public void setRebotes(double rebotes) {
-        this.rebotes = rebotes;
-    }
-
-    public double getRoubos() {
-        return roubos;
-    }
-
-    public void setRoubos(double roubos) {
-        this.roubos = roubos;
-    }
-
-    public double getTocos() {
-        return tocos;
-    }
-
-    public void setTocos(double tocos) {
-        this.tocos = tocos;
-    }
-
-    public double getTurnovers() {
-        return turnovers;
-    }
-
-    public void setTurnovers(double turnovers) {
-        this.turnovers = turnovers;
-    }
-
-    public int getOverallCalculado() {
-        return overallCalculado;
-    }
-
-    public void setOverallCalculado(int overallCalculado) {
-        this.overallCalculado = overallCalculado;
-    }
-
     
 }

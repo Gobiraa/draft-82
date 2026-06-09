@@ -1,8 +1,14 @@
 package com.draft82.api.model;
 
-import jakarta.persistence.*;
-import lombok.Data;
 import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import lombok.Data;
 
 @Entity
 @Table(name = "team_decade")
@@ -18,4 +24,6 @@ public class TeamDecade {
 
     @OneToMany(mappedBy = "teamDecade")
     private List<PlayerDecade> jogadores;
+
+    
 }
